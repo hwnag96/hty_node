@@ -98,4 +98,4 @@ api.get('/query_echo', (req, res, next) => {
 module.exports = api;
 
 
-/*안녕하세요*/
+/*안녕하세요kkkk*/
