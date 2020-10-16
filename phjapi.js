@@ -7,9 +7,9 @@ var mysql   = require('mysql');
 var api     = express();
 
 var connection = mysql.createConnection({
-    host     : 'ls-712a3de0f216372c332622b5ed5c6f22fe2f67bd.cu0xyssgzj43.ap-northeast-2.rds.amazonaws.com',
+    host     : 'ls-4ab94082220316df9f6805e2cb989baaea4e9715.cu0xyssgzj43.ap-northeast-2.rds.amazonaws.com',
     user     : 'dbmasteruser',
-    password : 'buackr!!##',
+    password : 'angksehwjsqq',
     database : 'BU'
 });
 
@@ -17,7 +17,7 @@ var connection = mysql.createConnection({
 //api Index
 api.get('/', (req, res, next) => {
 
-
+/*
 var dbInfo = {
 
     host: 'ls-4ab94082220316df9f6805e2cb989baaea4e9715.cu0xyssgzj43.ap-northeast-2.rds.amazonaws.com',
@@ -27,7 +27,7 @@ var dbInfo = {
     database: 'BU',
     multipleStatements: true
 }
-
+*/ 
 
     connection.connect();
     connection.query('SELECT * FROM sensor_data ', function (error, results, fields) {
@@ -96,5 +96,6 @@ api.get('/query_echo', (req, res, next) => {
 
 
 module.exports = api;
-// 231654984321
-// 123456789
+
+
+/*안녕하세요*/
