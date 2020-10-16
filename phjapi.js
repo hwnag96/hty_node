@@ -7,9 +7,9 @@ var mysql   = require('mysql');
 var api     = express();
 
 var connection = mysql.createConnection({
-    host     : 'ls-4ab94082220316df9f6805e2cb989baaea4e9715.cu0xyssgzj43.ap-northeast-2.rds.amazonaws.com',
+    host     : 'ls-712a3de0f216372c332622b5ed5c6f22fe2f67bd.cu0xyssgzj43.ap-northeast-2.rds.amazonaws.com',
     user     : 'dbmasteruser',
-    password : 'angksehwjsqq',
+    password : 'buackr!!##',
     database : 'BU'
 });
 
@@ -17,17 +17,17 @@ var connection = mysql.createConnection({
 //api Index
 api.get('/', (req, res, next) => {
 
-/*
+
 var dbInfo = {
 
-    host: 'ls-4ab94082220316df9f6805e2cb989baaea4e9715.cu0xyssgzj43.ap-northeast-2.rds.amazonaws.com',
+    host: ' ls-712a3de0f216372c332622b5ed5c6f22fe2f67bd.cu0xyssgzj43.ap-northeast-2.rds.amazonaws.com',
     port: '3306',
     user: 'dbmasteruser',
-    password:'angksehwjsqq',
+    password:'buackr!!##',
     database: 'BU',
     multipleStatements: true
 }
-*/ 
+
 
     connection.connect();
     connection.query('SELECT * FROM sensor_data ', function (error, results, fields) {
@@ -73,8 +73,8 @@ api.post('/insSensor', (req, res, next) => {
     var sensorValue = req.body.sensorValue;//"";
     var userId = req.body.userId; //"";
     
-    var sql = " insert into sensor_data (sensor_type, sensor_value, sensor_usr_id, ins_date, upd_date ) values ";
-    sql += " ('"+ sensorType +"', "+ sensorValue +", '"+ userId +"', now() , now()) ";
+    var sql = " insert into sensor_data (sensor_type, sensor_value, sensor_user, ins_date ) values ";
+    sql += " ('"+ sensorType +"', "+ sensorValue +", '"+ userId +"', now()) ";
     console.log(sql);
     connection.connect();
 
@@ -96,6 +96,3 @@ api.get('/query_echo', (req, res, next) => {
 
 
 module.exports = api;
-
-
-/*안녕하세요*/
