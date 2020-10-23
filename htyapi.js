@@ -98,4 +98,4 @@ api.get('/query_echo', (req, res, next) => {
 
 module.exports = api;
 // 231654984321
-// 123456789
+// res.send(results)
