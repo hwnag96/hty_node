@@ -5,6 +5,7 @@
 var express = require('express');
 var mysql   = require('mysql');
 var api     = express();
+var db      = require('./db');
 
 var connection = mysql.createConnection({
     host     : 'ls-712a3de0f216372c332622b5ed5c6f22fe2f67bd.cu0xyssgzj43.ap-northeast-2.rds.amazonaws.com',
@@ -30,15 +31,15 @@ var dbInfo = {
 
 
     connection.connect();
-    connection.query('SELECT * FROM sensor_data ', function (error, results, fields) {
+    db.query('SELECT * FROM sensor_data ', function (error, results, fields) {
         if (error) {
             console.log(error);
         }
-
+        res.send(results);
         console.log(results);
+        
     });
     connection.end();    
-    res.send("Welcome is API Fucntion");
 });
 
 /************* Routing **************/
