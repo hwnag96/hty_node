@@ -6,6 +6,7 @@ const express = require('express');
 const server  = express();
 
 const serverPort = 3920;
+//port 수정
 
 
 /************* Routing **************/
