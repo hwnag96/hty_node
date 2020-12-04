@@ -16,6 +16,7 @@
     "http": "0.0.1-security",
     "mysql": "^2.18.1",
     "path": "^0.12.7",
-    "pwm": "0.0.3"
+    "pwm": "0.0.3",
+    "startbootstrap-sb-admin-2": "^4.1.3"
   }
 }

@@ -5,7 +5,10 @@
 var express = require('express');
 var mysql   = require('mysql');
 var api     = express();
-var db      = require('./db');
+// var db      = require('./db');
+
+
+
 
 var connection = mysql.createConnection({
     host     : 'ls-712a3de0f216372c332622b5ed5c6f22fe2f67bd.cu0xyssgzj43.ap-northeast-2.rds.amazonaws.com',
@@ -28,8 +31,6 @@ var dbInfo = {
     database: 'BU',
     multipleStatements: true
 }
-
-
     connection.connect();
     db.query('SELECT * FROM sensor_data ', function (error, results, fields) {
         if (error) {
@@ -88,6 +89,7 @@ api.post('/insSensor', (req, res, next) => {
     })
 
 });
+
 
 //Query String
 // ex) http://localhost/api/echo?param1=123&param2=321
